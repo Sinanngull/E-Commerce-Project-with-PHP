@@ -1,0 +1,286 @@
+@charset "utf-8";
+/* Bilshop CSS Document - Hasan DURMAZ */
+
+/* ============= GENEL TANIMLAR ============= */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-family:Verdana;
+	font-size:16px;
+	color:#000;
+	margin:0;
+	background-image:url(../resimler/sablon-resimleri/body-bg.png);	
+
+}
+
+.sablon_w {
+	width:99%;	
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size:16px;
+	margin:0;	
+}
+
+
+/* ============= Container Alanı  ============= */
+#container {
+	display: flex;
+	justify-content: space-between;	
+ 	min-height: 100%;
+    height: auto !important;
+    height: 100%;	
+}
+
+aside {
+	width: 19%;
+	background-color: #222;
+	color: #FFF;
+	padding: 10px;
+}
+
+#aside_logo {
+	border:solid 1px #FFF;
+	padding:15px 10px;
+	margin:10px 0;
+	text-align: center;	
+}
+
+#aside_logo img {
+	width: 90%;
+	height: auto;
+}
+
+#aside_yonetici {
+	border:solid 1px #FFF;
+	padding:7px 10px;
+	margin:10px 0;
+	text-align: center;		
+}
+
+#aside_yonetici img {
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+#aside_menu_baslik {
+	border:solid 1px #FFF;
+	padding:7px 10px;
+	margin:10px 0;
+	text-align: center;	
+}
+
+
+.aside_menu {
+	border:solid 1px #FFF;
+	padding:15px 10px;
+	margin:10px 0;
+}
+
+.aside_menu ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;	
+}
+
+.aside_menu ul li {
+	position:relative;
+	margin: 0 7px;
+	line-height: 2;
+	border-bottom: 1px dashed #999;
+}
+
+.aside_menu ul li a {
+	color:#aaa;
+	background-color: #222;
+	text-decoration:none;
+	font-weight:bold;
+	margin-left:3px;
+	line-height:30px;
+	display:block;
+	padding:0 5px;	
+}
+
+.aside_menu ul li a:hover, .aside_menu ul li:hover a {
+	color:#FFF;
+}
+
+.aside_menu ul li ul {
+	display: none;
+	width: 240px;	
+	position: absolute;
+	left: 92%;
+	top: 0;
+	padding-left: 34px;
+}
+
+.aside_menu ul li:hover ul {
+	display: block;
+
+}
+
+
+#content {
+	width: 80%;
+}
+
+#admin_panel_title {
+
+	width:100%;
+	color: #FFF;
+	background-color:#222;
+	padding:20px 10px;
+	text-align: center;
+}
+
+#admin_panel_title h2 {
+	border:solid 1px #FFF;
+	padding: 10px;
+	font-size: 30px;
+}
+
+#page_title, #page_content {
+	background-color:#f9f9f9;
+	border-bottom:solid 1px #CCC;
+	border-top:solid 2px #e10404;
+	box-shadow:2px 2px 3px #B1AFAF;
+	padding:8px;
+	margin:10px 0;
+}
+
+.thbaslik, .thbaslik:hover  {
+	color: #FFF;
+	background-color: rgba(0,0,0,0.6);
+	line-height: 30px;
+} 
+
+
+
+tr {
+	line-height: 25px;
+}
+
+.table:hover {
+	background-color: #ffffbf;
+	border: #000;
+}
+
+.btn_ekle {
+	color: #FFF;
+	background-color: #e10404;
+	text-decoration: none;
+	padding: 10px 20px;
+	font-weight: bold;
+	border: none;
+}
+
+.btn_ekle:hover {
+	background-color: #222;
+}
+
+.ara {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	padding: 10px;
+	border: 1px solid #666;
+}
+
+.pasif {
+	width: 35px;
+	font-size: 20px;
+	color: #FFF;
+	background-color: #e10404;
+	padding: 7px;
+}
+
+.aktif {
+	width: 35px;
+	font-size: 20px;
+	color: #FFF;
+	background-color: #008000;
+	padding:7px;
+}
+
+.sil {
+	font-size: 24px;
+	color: #e10404;
+}
+
+.guncelle {
+	font-size: 24px;
+	color: #008000;	
+}
+
+.form input, .form textarea, .form select  {
+	width: 90%;
+	padding: 7px;
+}
+
+#dikey_hizala {
+	display: flex;
+	align-items: center;
+}
+.form strong {
+	line-height: 1.8;
+}
+
+.form input[type="checkbox"] {
+	width: 25px;
+	height: 25px;
+	margin-right: 10px;
+}
+
+.form input[type="submit"] {
+	color: #FFF;
+	background-color: #e10404;
+	font-size: 18px;
+}
+
+.form input[type="submit"]:hover {
+	background-color: #222;
+}
+
+#form_ara {
+	position: relative;
+}
+
+#btn_ara {
+	font-size: 18px;
+	color: #e10404;
+	font-weight: bold;
+	border: none;
+	background-color:transparent;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.kirmizi {
+	color:#e10404;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+	#container { flex-direction: column;}
+	aside {	width: 100%;}
+	#content {width: 100%;}
+	.aside_menu ul li ul {display: none; position: static;}
+	.form input, .form textarea, .form select  { width: 100%;
+}
+
+
+}

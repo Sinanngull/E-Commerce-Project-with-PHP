@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+body { font-family: arial, verdana, tahoma; font-size: 16px; color: #000;margin: 0;}
+
+.container { width: 1200px;margin: 0 auto; }
+
+#header_top { font-size: 18px; color: #ddd; background-color: #2a363f; padding: 7px 0;}
+#header_top_flex {display: flex; justify-content: space-between; align-items: center; }
+#header_top_phone {}
+#header_top_phone a {color: #ddd; text-decoration: none; }
+#header_top_phone a: hover {color: #FFF; }
+#header_top_search {}
+#header_top_search input {padding: 10px 10px 10px 20px; border-left: 1px solid #FFF; border-top: 1px solid #FFF; border-bottom: 1px solid #FFF; border-right: none; border-radius: 20px 0 0 20px; color: #FFF; background-color: #2a363f;  }
+#header_top_search input:focus {outline: none;}
+#header_top_search ::placeholder { color: #FFF !important;}
+#header_top_search button { padding: 10px 20px 10px 10px; border-right: 1px solid #FFF; border-top: 1px solid #FFF; border-bottom: 1px solid #FFF; border-left: none; border-radius: 0 20px 20px 0; background-color: #ddd; margin-left: -8px;}
+#header_top_search #btn_ara {color: #FFF; background-color: #2a363f; }
+#header_top_search #btn_ara:hover {color: #e10303;}
+#header_top_sosyalmenu {}
+#header_top_sosyalmenu ul {list-style-type: none; margin: 0; padding: 0; display: flex;}
+#header_top_sosyalmenu ul li {}
+#header_top_sosyalmenu ul li a { color: #666; background-color: #ddd; width: 35px; line-height: 35px; display: block; margin-left: 7px; text-align: center; transition: all 0.5s; }
+#header_top_sosyalmenu ul li a:hover { color: #000; background-color: #FFF;border-radius: 50%;  }
+
+header {background-color: rgba(255,255,255,0.9); border-bottom: 1px solid rgba(0,0,0,0.2); padding: 15px 0;}
+#header_flex {display: flex; justify-content: space-between; align-items: center;}
+#header_logo {}
+#header_logo img {display: block; width: 215px; height: auto;}
+/* -- Normal Menü -- */
+#header_menu > ul {list-style-type: none; margin: 0; padding: 0; display: flex;}
+#header_menu > ul > li { position: relative; }
+#header_menu > ul > li > a { color: #000; font-weight: bold; text-decoration: none; padding: 0 15px; margin-left: 10px;}
+#header_menu > ul > li > a:hover { color: #e10303; }
+/* -- Açılır Menü -- */
+#header_menu ul li  ul { /*display: none;*/ visibility: hidden; opacity: 0; position: absolute; width: 200px; list-style-type: none; margin: 0; padding: 60px 0 0 8px; transition: all 0.5s; }
+#header_menu ul li:hover  ul { /*display: block;*/ visibility: visible; opacity: 1; padding-top: 30px; }
+#header_menu ul li  ul li { background-color: rgba(255,255,255,0.9); border-left: solid 1px #999; border-right: solid 1px #999; line-height: 2; padding: 0 15px; }
+#header_menu ul li  ul li:first-child { border-top: 3px solid #e10303;  }
+#header_menu ul li  ul li:last-child { border-bottom: 2px solid #666;  }
+#header_menu ul li  ul li a { border-bottom: solid 1px #CCC; display: block; color: #000; text-decoration: none; font-weight: bold; transition: all 0.5s; }
+#header_menu ul li  ul li a:hover {color: #e10303; padding-left: 20px;}
+
+
+#slider {background-color: #eee;}
+#slider img {display: block;}
+
+#page_title { color: #FFF; background-image: url("../resimler/sablon-resimleri/page-title-bg.jpg"); background-size: cover; }
+#page_title_flex { height: 250px; display: flex; align-items: center; }
+#page_title h1 {margin: 0; font-weight: normal; font-size: 24px;}
+
+#content {}
+
+footer {color: #ddd; background-color: #2a363f; padding: 10px 0; text-align: center; line-height: 1.5;}
+#footer_bottom {font-size: 13px; color: #ccc ; background-color: #1c2329; padding: 7px 0;}
+#footer_bottom_flex { display: flex; justify-content: space-between; align-items: center;}
+
+#sayfalar {padding: 20px 0;}
+
+#urun_listele {}
+#urun_listele_flex {display: flex; flex-wrap: wrap;}
+.urun {width: 23%; border: solid 1px rgb(220,220,220); text-align: center; margin-top: 25px; margin-bottom: 25px; margin-right: 2%; padding: 10px;}
+.urun:nth-child(4n) {margin-right: 0;}
+.urun:hover {box-shadow: 2px 0 4px rgb(200,200,200), -2px 0 4px rgb(200,200,200), 0 2px 4px rgb(200,200,200),  0 -2px 4px rgb(200,200,200);}
+.urun img { width: 100%; height: auto ; }
+.urun h2 { font-weight: normal; font-size: 12px; height: 45px; }
+.urun h2 a {text-decoration: none; color: #000;}
+.urun p { font-size: 14px; font-weight: bold; }
+.tl {font-size: 12px;}
+.urun_sepet_detay { display: flex; justify-content: space-around; }
+.urun_sepet_detay a {  color: #2a363f; display: block; padding: 5px 10px; }
+.urun_sepet_detay a:hover { color: #e10303 ; }
+
+#urun_detay_row1 {padding: 20px 0;}
+#urun_detay_row1_flex {display: flex; }
+#urun_detay_row1_left { width: 40%; }
+#urun_detay_row1_left img { width: 100%; height: auto;  }
+#urun_detay_row1_right {margin-left: 10%; margin-top: 40px;}
+#urun_detay_row1_right span { color: #e10303 ; font-size: 16px; font-weight: bold; }
+#urun_detay_row1_right a { color: #CCC; background-color: #2a363f ; padding: 5px 15px; display: inline-block; text-decoration: none;}
+#urun_detay_row1_right a:hover {color: #FFF; background-color: #e10303 ;}
+
+#urun_detay_row2 { line-height: 1.5; text-align: justify; }
+
+#iletisim_row1 {padding: 20px 0;}
+#iletisim_row1 h2 {font-size: 20px; position: relative; margin-bottom: 50px;}
+#iletisim_row1 h2:before {content: ""; width:50px; height: 2px; background-color: #e10303; position: absolute; top: 25px; transition: all 0.5s;}
+#iletisim_row1 h2:hover:before {width: 150px;}
+
+#iletisim_row1_flex { display: flex; justify-content: space-between; }
+#iletisim_row1_left { width: 45%; }
+#iletisim_row1_left p { line-height: 1.5; margin: 30px 0; }
+#iletisim_row1_left p a { text-decoration: none; color: #000; }
+#iletisim_row1_right  {width: 45%;}
+#iletisim_row1_right input, #iletisim_row1_right textarea {width: 100%; padding: 7px;}
+#iletisim_row1_right input[type="submit"] { color: #FFF; background-color: #e10303 ; border: none; }
+#iletisim_row1_right input[type="submit"]:hover { color: #FFF; background-color: #2a363f; }
+::placeholder {color: rgba(0,0,0,0.6);}
+#guvenlik_kodu {width: 50% !important; }
+.kirmizi {color: #e10303; font-weight: bold;}
+
+#uye_girisi {padding: 20px 0;}
+#uye_girisi form {width: 40%;}
+#uye_girisi form p {margin: 20px 0; line-height: 2;}
+#uye_girisi form input { width: 70%; padding: 7px; }
+#uye_girisi input[type="submit"] { color: #FFF; background-color: #e10303 ; border: none; }
+#uye_girisi input[type="submit"]:hover { color: #FFF; background-color: #2a363f; }
+#parola_goster_gizle {position: relative;}
+#parola_goster_gizle i {position: absolute; right: 10px; top: 2px; color: #666; cursor: pointer;}
+
+
+
+
+
+/* === RESPONSİVE CSS - FARKLI EKRANLAR - TELEFON - TABLET İÇİN ===  */
+
+@media screen and (max-width: 1024px) {
+
+	.container {width: 970px;}
+	#slider img {width: 100%; line-height: auto;}
+
+}
+
+.slicknav_menu { display:none; }
+
+@media screen and (max-width: 800px) {
+
+	.js #menu {	display:none;	}
+	.js .slicknav_menu { display:block; }
+
+	.container {width: 97%;}
+	#header_top { border-top: solid 1px rgba(255,255,255,0.3); padding: 15px 0; }
+	.slicknav_menu i {display: none;}
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+	#header_top_flex {flex-direction: column;}
+	#header_top_search {margin: 13px 0;}
+	#header_flex {justify-content: center;}
+	#footer_bottom_flex {flex-direction: column;}
+
+    .urun {width: 49%; }
+    .urun:nth-child(2n) {margin-right: 0;}
+
+    #urun_detay_row1_flex {flex-direction: column; }
+    #urun_detay_row1_left { width: 80%; margin: 0 auto; }
+    #urun_detay_row1_right {margin-left: 0; margin-top: 10px;}
+
+    #uye_girisi form {width: 80%;}
+
+    #iletisim_row1_flex {flex-direction: column;}
+    #iletisim_row1_left { width: 100%; }
+    #iletisim_row1_right  {width: 100%;}
+
+
+
+}
+
+/* === TOOGLE MENÜ - SLİCKNAV MENÜ - MOBİL MENÜ ===  */
+
+/*
+    Mobile Menu Core Style
+*/
+
+.slicknav_btn { position: relative; display: block; vertical-align: middle; float: right; padding: 0.438em 0.625em 0.438em 0.625em; line-height: 1.125em; cursor: pointer; }
+.slicknav_menu  .slicknav_menutxt { display: block; line-height: 1.188em; float: left; }
+.slicknav_menu .slicknav_icon { float: left; margin: 0.188em 0 0 0.438em; }
+.slicknav_menu .slicknav_no-text { margin: 0 }
+.slicknav_menu .slicknav_icon-bar { display: block; width: 1.125em; height: 0.125em; -webkit-border-radius: 1px; -moz-border-radius: 1px; border-radius: 1px; -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); }
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar { margin-top: 0.188em }
+.slicknav_nav { clear: both }
+.slicknav_nav ul,
+.slicknav_nav li { display: block }
+.slicknav_nav .slicknav_arrow { font-size: 0.8em; margin: 0 0 0 0.4em; }
+.slicknav_nav .slicknav_item { cursor: pointer; }
+.slicknav_nav .slicknav_row { display: block; }
+.slicknav_nav a { display: block }
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a { display: inline }
+.slicknav_menu:before,
+.slicknav_menu:after { content: " "; display: table; }
+.slicknav_menu:after { clear: both }
+/* IE6/7 support */
+.slicknav_menu { *zoom: 1 }
+
+/* 
+    User Default Style
+    Change the following styles to modify the appearance of the menu.
+*/
+
+.slicknav_menu {
+    font-size:16px;
+}
+/* Button */
+.slicknav_btn {
+    margin: 5px 5px 6px;
+    text-decoration:none;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); 
+    background-color: #e10303;
+}
+/* Button Text */
+.slicknav_menu  .slicknav_menutxt {
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 0 1px 3px #000;
+}
+/* Button Lines */
+.slicknav_menu .slicknav_icon-bar {
+  background-color: #f5f5f5;
+}
+.slicknav_menu {
+    background:#2a363f;
+    padding:5px;
+}
+.slicknav_nav {
+    color:#fff;
+    margin:0;
+    padding:0;
+    font-size:0.875em;
+}
+.slicknav_nav, .slicknav_nav ul {
+    list-style: none;
+    overflow:hidden;
+}
+.slicknav_nav ul {
+    padding:0;
+    margin:0 0 0 20px;
+}
+.slicknav_nav .slicknav_row {
+    padding:5px 10px;
+    margin:2px 5px;
+}
+.slicknav_nav a{
+    padding:5px 10px;
+    margin:2px 5px;
+    text-decoration:none;
+    color:#fff;
+}
+.slicknav_nav .slicknav_item a,
+.slicknav_nav .slicknav_parent-link a {
+    padding:0;
+    margin:0;
+}
+.slicknav_nav .slicknav_row:hover {
+    background:#e10303;
+    color:#fff;
+}
+.slicknav_nav a:hover{
+    background:#e10303;
+    color:#FFF;
+}
+.slicknav_nav .slicknav_txtnode {
+     margin-left:15px;   
+}
